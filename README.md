@@ -1,16 +1,25 @@
 # extendedMythicalMysfits
-(10 pts) Your cloud app public url.
+https://wit-cc-a6-xud.s3.amazonaws.com/index.html
+(PS: This website will be unaccessible on Augest 30th 2021 due to AWS educate account expiration.)
 
 # Introduction
-Briefly describe what your app is all about.
+This project is about adding new features and using new AWS services to the Mythical Mysfits website to improve users’ experience. 
 
 # Features
-List all the features of your app
-
-Feature #1
-Feature #2
-Feature #3
-...
+Existing Feature
+  1. Like Mysfits
+  2. Adopt Mysfits
+  3. Filter Mysfits
+  4. View Mysfits
+  5. Register Users
+  6. Login/Logout
+  7. Capture User's Clicks
+New Features
+  1. Dislike Mysfits
+  2. Create custom Mysfits
+  3. Recommend Mysfits
+  4. Feed Mysfits
+  
 # System Architecture
 Draw architecture diagrams of all services of your app and their relationships.
 
@@ -29,9 +38,11 @@ Sample: https://www.youtube.com/watch?v=Pr-JMqTkdEM
 How to record your screen: https://www.techradar.com/how-to/record-your-screen
 
 # References
-Provide links to all coding resources you used in your project. Note: if copy and paste is detected without citing the source, then 50% deduction on the final report!
+https://aws.amazon.com/getting-started/hands-on/build-modern-app-fargate-lambda-dynamodb-python/
+https://thewebspark.com/2018/07/03/how-to-add-data-to-dynamodb-table-using-aws-lambdaserverless-function/
+https://www.youtube.com/watch?v=mfAT38B_uhw
 
 # Team members
-student name (email), role
-student name (email), role
-...
+* Duoduo Xu (xud@wit.edu), Team Lead, developed Dislike and Create Mysfits features.
+* Sophia McGlew (mcglews@wit.edu), developed Recommend Mysfits feature.
+* Zachary Johnson (johnsonz3@wit.edu), developed Feed Mysfits feature.
