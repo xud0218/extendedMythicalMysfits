@@ -14,6 +14,7 @@ Existing Feature
   5. Register Users
   6. Login/Logout
   7. Capture User's Clicks
+  
 New Features
   1. Dislike Mysfits
   2. Create custom Mysfits
