@@ -30,32 +30,72 @@ Draw architecture diagrams of all services of your app and their relationships.
   2. Create Lambda function
       - Go to your AWS console and use the search bar at top to search for __Lambda__.
       - In Lambda/Functions console, click on the __Create function__ button at the upper right.
-      - Enter a Function name as AddMysfits.
+      - Enter a Function name as __AddMysfits__.
       - Copy the index.js in ```Project/app/service/addMysfits``` to your Lambda function.
       - In addMysfits, go to __Configuration__ and Edit the Environment variables.
-      - Put TABLE_NAME as Key, MysfitsTable as Value and Save it.
+      - Put __TABLE_NAME__ as Key, __MysfitsTable__ as Value and Save it.
   3. Create API Gateway
       - Go to your AWS console and use the search bar at top to search for __API Gateway__.
       - In API Gateway console, click on the __Create API__ button at the upper right.
       - Select the __REST API__ and build the API. (do not select the private REST API)
-      - Enter the API name as CreateMysfitsAPI.
+      - Enter the API name as __CreateMysfitsAPI__.
       - Go to CreateMysfitsAPI, click on the Action button at the upper left and choose Create Resource.
-      - Enter the Resource Name as entries, select the Enable API Gateway CORS and Create Resource.
+      - Enter the Resource Name as __entries__, select the Enable API Gateway CORS and Create Resource.
       - Click on the Action button again and choose Create Method.
       - In the Resources bar, choose POST as your new Method.
       - In the POST Method, choose Lambda function as Integration type, select Use Lambda Proxy integration, choose your region, choose AddMysfits in Lambda Function and Save it.
       - Click on the Action button, choose Enable CORS.
       - Click on the Enable CORS and replace existing CORS headers.
-  4. Modify the variables
-      - 
-In the bottom panel of your new Cloud9 IDE, there will be a terminal command line terminal open and ready to use. If you close it or need a new one, use the Window > New Terminal menu.  
-  5. Creating a Static Website in Amazon S3.
-Choose a name for your S3 bucket and create it using the ```aws s3 mb```, replacing where indicated:
-```
-aws s3 mb s3://REPLACE_ME_BUCKET_NAME
-```
-  5. Copy the Mythcal Mysfits website (index.html) in the Project folder to your S3 bucket using the ```aws s3 cp``` command:
-
+  4. Update frontend
+      - In ```Project/web``` folder, there will be three html files. You need replace string variables that have __REPLACE_ME__ inside in each html file.
+      
+      In the bottom panel of your new Cloud9 IDE, there will be a terminal command line terminal open and ready to use. If you close it or need a new one, use the Window > New Terminal menu.  
+      - Creating a Static Website in Amazon S3.
+        - Choose a name for your S3 bucket and create it using the ```aws s3 mb```, replacing where indicated:
+      ```
+      aws s3 mb s3://REPLACE_ME_BUCKET_NAME
+      ```
+      - Copy the whole Mythcal Mysfits website in the ```Project/web``` folder to your S3 bucket using the ```aws s3 cp --recursive``` command:
+      ```
+      aws s3 cp --recursive ~/environment/aws-modern-application-workshop/Project/web/ s3://YOUR-S3-BUCKET/
+      ```
+      - Update the S3 Bucket Policy to make the website visible to public
+      ```
+      aws s3api put-bucket-policy --bucket REPLACE_ME_BUCKET_NAME --policy file://~/environment/aws-modern-application-workshop/module-1/aws-cli/website-bucket-policy.json
+      ```
+   5. Update backend
+      - Bulid a Docker image
+      ```
+      cd ~/environment/aws-modern-application-workshop/Project/app
+      ```
+      ```
+      docker build . -t REPLACE_ME_AWS_ACCOUNT_ID.dkr.ecr.REPLACE_ME_REGION.amazonaws.com/mythicalmysfits/service:latest
+      ```
+      You will see a similar return. Copy the tag for next step.
+      ```
+      Successfully built 8bxxxxxxxxab
+      Successfully tagged 111111111111.dkr.ecr.us-east-1.amazonaws.com/mythicalmysfits/service:latest
+      ```
+      - Test The Service Locally
+      ```
+      docker run -p 8080:8080 REPLACE_ME_WITH_DOCKER_IMAGE_TAG
+      ```
+      __Select Preview > Preview Running Application in the Cloud9 menu bar:__
+      
+      - Push the Docker image to Amazon ECR
+      ```
+      $(aws ecr get-login --no-include-email)
+      ```
+      ```
+      docker push REPLACE_ME_WITH_DOCKER_IMAGE_TAG
+      ```
+      - Update Task
+        - Go to your AWS console and use the search bar at top to search for __ECS__.
+        - Click on the MythicalMysfits-Cluster.
+        - Go to __Tasks__
+        - Select the __mythicalmysfitsservice__ task
+        - __Stop__ the task. In a few minutes the task will be updated.
+Now, you Mythical Mysfits website should be good to go! Congratulation! Please send me an email if anything went wrong.
 
 # Demo video
 Upload your demo video to youtube and put a link here. Basically, the video content is very much like the quick live demo of your app with the followings:
