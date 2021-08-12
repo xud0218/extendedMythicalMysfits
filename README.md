@@ -95,6 +95,7 @@ Draw architecture diagrams of all services of your app and their relationships.
         - Go to __Tasks__
         - Select the __mythicalmysfitsservice__ task
         - __Stop__ the task. In a few minutes the task will be updated.
+
 Now, you Mythical Mysfits website should be good to go! Congratulation! Please send me an email if anything went wrong.
 
 # Demo video
