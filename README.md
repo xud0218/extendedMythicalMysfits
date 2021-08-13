@@ -1,6 +1,6 @@
 # extendedMythicalMysfits :cloud:
 https://wit-cc-a6-xud.s3.amazonaws.com/index.html
-#
+
 (PS: This website will be unaccessible on August 30th 2021 due to AWS educate account expiration.)
 
 # Introduction
