@@ -1,9 +1,10 @@
 # extendedMythicalMysfits :cloud:
 https://wit-cc-a6-xud.s3.amazonaws.com/index.html
+#
 (PS: This website will be unaccessible on August 30th 2021 due to AWS educate account expiration.)
 
 # Introduction
-This project is about adding new features and using new AWS services to the Mythical Mysfits website to improve users’ experience. 
+This project is for our Cloud Computing class in which we chose to take the existing Mystical Mysfits application we had worked on in class and expand it. To do this we planned on adding new features and using new AWS services to expand the Mythical Mysfits website to improve users’ experience and functions of the application. 
 
 # Features
 Existing Features
@@ -20,6 +21,7 @@ New Features
   2. Create custom Mysfits
   3. Recommend Mysfits
   4. Feed Mysfits
+  5. Cloudwatch Dashboard
   
 # System Architecture
 Draw architecture diagrams of all services of your app and their relationships.
@@ -106,9 +108,7 @@ Draw architecture diagrams of all services of your app and their relationships.
 Now, you Mythical Mysfits website should be good to go! Congratulation!:trophy: Please send me an email if anything went wrong.
 
 # Demo video
-
 https://www.youtube.com/watch?v=9Peax6BRCdI&ab_channel=Sophaloph07
-
 
 # References
 https://aws.amazon.com/getting-started/hands-on/build-modern-app-fargate-lambda-dynamodb-python/
@@ -118,4 +118,4 @@ https://www.youtube.com/watch?v=mfAT38B_uhw
 # Team members
 * Duoduo Xu (xud@wit.edu), Team Lead, developed Dislike and Create Mysfits features.
 * Sophia McGlew (mcglews@wit.edu), developed Recommend Mysfits feature.
-* Zachary Johnson (johnsonz3@wit.edu), developed Feed Mysfits feature.
+* Zachary Johnson (johnsonz3@wit.edu), developed Feed Mysfits feature & Cloudwatch Dashboard.
