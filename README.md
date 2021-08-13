@@ -106,15 +106,9 @@ Draw architecture diagrams of all services of your app and their relationships.
 Now, you Mythical Mysfits website should be good to go! Congratulation!:trophy: Please send me an email if anything went wrong.
 
 # Demo video
-Upload your demo video to youtube and put a link here. Basically, the video content is very much like the quick live demo of your app with the followings:
 
-  1. Introduction
-  2. Quick walkthrough of all the features of your app one by one
-Make it short and interesting (1-3 minutes)
+https://www.youtube.com/watch?v=9Peax6BRCdI&ab_channel=Sophaloph07
 
-Sample: https://www.youtube.com/watch?v=Pr-JMqTkdEM
-
-How to record your screen: https://www.techradar.com/how-to/record-your-screen
 
 # References
 https://aws.amazon.com/getting-started/hands-on/build-modern-app-fargate-lambda-dynamodb-python/
