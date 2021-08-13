@@ -48,6 +48,7 @@ Draw architecture diagrams of all services of your app and their relationships.
       - Click on the Enable CORS and replace existing CORS headers.
   4. Update frontend
       - In ```Project/web``` folder, there will be three html files. You need replace string variables that have __REPLACE_ME__ inside in each html file.
+      
       ![img](https://d1.awsstatic.com/acs/Modern%20Application%20workshop/before-replace2.116faa6540167bc007586acd50cc5b4ae41acc46.png)
       
       In the bottom panel of your new Cloud9 IDE, there will be a terminal command line terminal open and ready to use. If you close it or need a new one, use the Window > New Terminal menu.  
