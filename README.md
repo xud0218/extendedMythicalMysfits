@@ -24,7 +24,7 @@ New Features
   5. Cloudwatch Dashboard
   
 # System Architecture
-Draw architecture diagrams of all services of your app and their relationships.
+./mysfits.png
 
 # Deployment
   1. Create the basic services
