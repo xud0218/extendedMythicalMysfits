@@ -24,7 +24,7 @@ New Features
   5. Cloudwatch Dashboard
   
 # System Architecture
-./mysfits.png
+(./mysfits.png)
 
 # Deployment
   1. Create the basic services
